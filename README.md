@@ -3,6 +3,17 @@
 A modern, secure feedback sharing platform for managers and team members to exchange structured feedback in a simple and friendly interface.
 
  🌟 Features
+ Dashboard
+ ![8A6DE180-B47D-4CAE-A879-83306EA623B8_1_105_c](https://github.com/user-attachments/assets/5c5215cf-7ae4-4869-93a4-80c86e24c0f4)
+
+ Team
+ ![E72AC734-C0B0-40BA-9750-BE4F54FD8167_1_105_c](https://github.com/user-attachments/assets/fd846053-ba12-49a9-8047-0c852ca92087)
+ Feedback
+![5B49602D-159B-4708-AC1C-16AB13F79FD3_1_105_c](https://github.com/user-attachments/assets/c59bbf6c-858b-475c-beeb-dfcad6848aab)
+Feedback
+![D20E7369-31E2-49B4-B10B-B5623BE0C672_1_105_c](https://github.com/user-attachments/assets/00f6c5bd-2003-4240-8953-5eadf598bdb6)
+
+ 
 
 Core Features (MVP)
 - Authentication & Roles: Manager and Employee roles with secure login
