@@ -1,201 +1,316 @@
- Lightweight Feedback System
+# 🚀 Lightweight Feedback System
 
-A modern, secure feedback sharing platform for managers and team members to exchange structured feedback in a simple and friendly interface.
+A **modern and secure feedback sharing platform** that enables **Managers and Employees** to exchange structured feedback in a clean and intuitive interface.
 
- 🌟 Features
- Dashboard
- ![8A6DE180-B47D-4CAE-A879-83306EA623B8_1_105_c](https://github.com/user-attachments/assets/5c5215cf-7ae4-4869-93a4-80c86e24c0f4)
-
- Team
- ![E72AC734-C0B0-40BA-9750-BE4F54FD8167_1_105_c](https://github.com/user-attachments/assets/fd846053-ba12-49a9-8047-0c852ca92087)
- Feedback
-![5B49602D-159B-4708-AC1C-16AB13F79FD3_1_105_c](https://github.com/user-attachments/assets/c59bbf6c-858b-475c-beeb-dfcad6848aab)
-Feedback
-![D20E7369-31E2-49B4-B10B-B5623BE0C672_1_105_c](https://github.com/user-attachments/assets/00f6c5bd-2003-4240-8953-5eadf598bdb6)
-
- 
-
-Core Features (MVP)
-- Authentication & Roles: Manager and Employee roles with secure login
-- Feedback Submission: Managers can submit structured feedback (strengths, areas to improve, sentiment)
-- Feedback Visibility: Employees can view their feedback history
-- Dashboard: Team overview for managers, feedback timeline for employees
-- Feedback Management: Managers can edit past feedback, employees can acknowledge feedback
-
-Bonus Features
-- Modern UI: Clean, responsive design with intuitive navigation
-- Real-time Updates: Instant feedback when data changes
-- Search & Filter: Easy feedback discovery and organization
-- Export Functionality: Download feedback data
-- Responsive Design: Works on desktop and mobile devices
-
- 🛠️ Tech Stack
-
-Frontend
-- React 18 with TypeScript
-- Tailwind CSS for styling
-- React Router for navigation
-- React Query for data fetching
-- Lucide React for icons
-
- Backend
-- Python Flask with Flask-RESTful
-- SQLAlchemy ORM
-- Flask-JWT-Extended for authentication
-- Flask-CORS for cross-origin requests
-- SQLite database (can be easily switched to PostgreSQL)
-
-Development
-- Docker for containerization
-- Python 3.11+ for backend
-- Node.js 18+** for frontend
-
- Quick Start
-
- Prerequisites
-- Docker and Docker Compose
-- Node.js 18+ (for local development)
-- Python 3.11+ (for local development)
-
- Using Docker (Recommended)
-```bash
-# Clone the repository
-git clone <your-repo-url>
-cd feedback-system
-
-# Start the entire application
-docker-compose up --build
-
-# Access the application
-# Frontend: http://localhost:3000
-# Backend API: http://localhost:5000
-```
-
- Local Development
-```bash
-# Backend Setup
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-
-# Frontend Setup (in a new terminal)
-cd frontend
-npm install
-npm start
-```
-📁 Project Structure
-
-```
-feedback-system/
-├── backend/
-│   ├── app.py                 # Flask application
-│   ├── models.py              # Database models
-│   ├── routes.py              # API routes
-│   ├── auth.py                # Authentication logic
-│   ├── requirements.txt       # Python dependencies
-│   └── Dockerfile             # Backend Docker configuration
-├── frontend/
-│   ├── src/
-│   │   ├── components/        # React components
-│   │   ├── pages/            # Page components
-│   │   ├── hooks/            # Custom React hooks
-│   │   ├── services/         # API services
-│   │   └── types/            # TypeScript types
-│   ├── package.json          # Node.js dependencies
-│   └── Dockerfile            # Frontend Docker configuration
-├── docker-compose.yml        # Docker orchestration
-└── README.md                 # This file
-```
-
- 🎨 Design Decisions
-
- Architecture
-- **Monorepo Structure**: Easy to manage and deploy
-- **RESTful API**: Clean, predictable API design
-- **JWT Authentication**: Stateless, scalable authentication
-- **SQLite for Development**: Simple setup, easy to switch to PostgreSQL for production
-
- UI/UX Design
-- **Clean & Minimal**: Focus on content, not distractions
-- **Intuitive Navigation**: Clear hierarchy and breadcrumbs
-- **Responsive Design**: Works seamlessly on all devices
-- **Accessibility**: WCAG compliant design patterns
-- **Modern Components**: Cards, modals, and interactive elements
-
- Security
-- **Role-based Access Control**: Strict separation between manager and employee views
-- **JWT Tokens**: Secure authentication with expiration
-- **Input Validation**: Server-side validation for all inputs
-- **CORS Configuration**: Proper cross-origin request handling
-
-🔧 API Endpoints
-
- Authentication
-- `POST /api/auth/login` - User login
-- `POST /api/auth/register` - User registration
-- `GET /api/auth/profile` - Get user profile
-
-Feedback
-- `GET /api/feedback` - Get feedback (filtered by role)
-- `POST /api/feedback` - Create new feedback
-- `PUT /api/feedback/<id>` - Update feedback
-- `DELETE /api/feedback/<id>` - Delete feedback
-- `POST /api/feedback/<id>/acknowledge` - Acknowledge feedback
-
- Users
-- `GET /api/users/team` - Get team members (managers only)
-- `GET /api/users/<id>` - Get user details
-
-🐳 Docker Configuration
-
-The application includes Docker configurations for easy deployment:
-
-- **Backend Dockerfile**: Python Flask application with all dependencies
-- **Frontend Dockerfile**: React application with optimized build
-- **Docker Compose**: Orchestrates both services with proper networking
-
-🚀 Deployment
-
- Using Docker
-```bash
-# Build and run with Docker Compose
-docker-compose up --build -d
-
-# Scale services if needed
-docker-compose up --scale backend=2 --scale frontend=2
-```
-
- Manual Deployment
-1. Set up a server with Python 3.11+ and Node.js 18+
-2. Clone the repository
-3. Follow the local development setup
-4. Configure environment variables
-5. Set up a reverse proxy (nginx) for production
-
- 🔒 Environment Variables
-
-Create a `.env` file in the backend directory:
-
-```env
-SECRET_KEY=your-secret-key-here
-JWT_SECRET_KEY=your-jwt-secret-here
-DATABASE_URL=sqlite:///feedback.db
-FLASK_ENV=development
-```
-
-📝 License
-
-This project is created for demonstration purposes.
- 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+Built with a **full-stack architecture using React, TypeScript, Python Flask, and Docker**.
 
 ---
 
-Built with ❤️ for better team communication and feedback culture. # DPD0Project
+## 📸 Application Preview
+
+### 📊 Dashboard
+![Dashboard](https://github.com/user-attachments/assets/5c5215cf-7ae4-4869-93a4-80c86e24c0f4)
+
+### 👥 Team Management
+![Team](https://github.com/user-attachments/assets/fd846053-ba12-49b9-8047-0c852ca92087)
+
+### 💬 Feedback Panel
+![Feedback](https://github.com/user-attachments/assets/c59bbf6c-858b-475c-beeb-dfcad6848aab)
+
+### 📈 Feedback History
+![Feedback History](https://github.com/user-attachments/assets/00f6c5bd-2003-4240-8953-5eadf598bdb6)
+
+---
+
+# ✨ Features
+
+## 🧩 Core Features (MVP)
+
+### 🔐 Authentication & Roles
+- Secure **JWT-based authentication**
+- Role-based access:
+  - **Manager**
+  - **Employee**
+
+### 📝 Feedback Submission
+Managers can provide structured feedback including:
+
+- Strengths
+- Areas of improvement
+- Sentiment rating
+
+### 👁️ Feedback Visibility
+Employees can:
+
+- View their feedback history
+- Track feedback timeline
+- Acknowledge feedback received
+
+### 📊 Dashboard
+- **Manager View**
+  - Team overview
+  - Feedback management
+
+- **Employee View**
+  - Personal feedback timeline
+
+### ✏️ Feedback Management
+Managers can:
+
+- Edit feedback
+- Update comments
+- Track acknowledgement status
+
+---
+
+# 🌟 Bonus Features
+
+- ⚡ **Real-time feedback updates**
+- 🔍 **Search & filtering**
+- 📥 **Export feedback reports**
+- 📱 **Fully responsive design**
+- 🎨 **Modern UI with Tailwind CSS**
+- 🧭 **Clean navigation experience**
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Router**
+- **React Query**
+- **Lucide React Icons**
+
+---
+
+## Backend
+
+- **Python Flask**
+- **Flask-RESTful**
+- **SQLAlchemy ORM**
+- **Flask-JWT-Extended**
+- **Flask-CORS**
+- **SQLite Database**
+
+> Database can easily be switched to **PostgreSQL for production**
+
+---
+
+# ⚙️ Development Tools
+
+- 🐳 **Docker**
+- 🐍 **Python 3.11+**
+- 🟢 **Node.js 18+**
+
+---
+
+# 🚀 Quick Start
+
+## 📦 Prerequisites
+
+Make sure you have installed:
+
+- Docker
+- Docker Compose
+- Node.js 18+
+- Python 3.11+
+
+---
+
+# 🐳 Run Using Docker (Recommended)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/feedback-system.git
+cd feedback-system
+
+Start the application:
+
+docker-compose up --build
+
+Access the application:
+
+Frontend
+
+http://localhost:3000
+
+Backend API
+
+http://localhost:5000
+💻 Local Development
+Backend Setup
+cd backend
+
+python -m venv venv
+
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+Frontend Setup
+
+Open another terminal:
+
+cd frontend
+
+npm install
+
+npm start
+📁 Project Structure
+feedback-system/
+│
+├── backend/
+│   ├── app.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── auth.py
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   └── types/
+│   │
+│   ├── package.json
+│   └── Dockerfile
+│
+├── docker-compose.yml
+└── README.md
+🎨 Design Principles
+Architecture
+
+Monorepo architecture
+
+RESTful API design
+
+Stateless JWT authentication
+
+Modular component structure
+
+UI / UX
+
+Clean minimal interface
+
+Responsive layouts
+
+Accessibility friendly
+
+Clear navigation hierarchy
+
+🔒 Security Features
+
+Role-based access control
+
+JWT token authentication
+
+Secure API validation
+
+CORS configuration
+
+🔌 API Endpoints
+Authentication
+POST /api/auth/login
+POST /api/auth/register
+GET  /api/auth/profile
+Feedback
+GET    /api/feedback
+POST   /api/feedback
+PUT    /api/feedback/:id
+DELETE /api/feedback/:id
+POST   /api/feedback/:id/acknowledge
+Users
+GET /api/users/team
+GET /api/users/:id
+🐳 Docker Setup
+
+This project includes Docker support:
+
+Backend container
+
+Frontend container
+
+Docker Compose orchestration
+
+Run production mode:
+
+docker-compose up --build -d
+
+Scale services:
+
+docker-compose up --scale backend=2 --scale frontend=2
+🔧 Environment Variables
+
+Create .env inside backend
+
+SECRET_KEY=your-secret-key
+JWT_SECRET_KEY=your-jwt-secret
+DATABASE_URL=sqlite:///feedback.db
+FLASK_ENV=development
+🚀 Deployment
+
+You can deploy using:
+
+Docker
+
+AWS
+
+DigitalOcean
+
+Render
+
+Railway
+
+Recommended production stack:
+
+React + Nginx
+Flask + Gunicorn
+PostgreSQL
+Docker
+🤝 Contributing
+
+Fork repository
+
+Create feature branch
+
+git checkout -b feature/new-feature
+
+Commit changes
+
+git commit -m "Add new feature"
+
+Push to branch
+
+git push origin feature/new-feature
+
+Open Pull Request
+
+📝 License
+
+This project is licensed under the MIT License.
+
+❤️ Author
+
+Ranbir Singh
+
+Full Stack Developer (MERN)
+
+GitHub
+https://github.com/RanbirProjects
+
+LinkedIn
+https://www.linkedin.com/in/ranbirsingh1001/
+
+LeetCode
+https://leetcode.com/u/ranbirsingh7/
